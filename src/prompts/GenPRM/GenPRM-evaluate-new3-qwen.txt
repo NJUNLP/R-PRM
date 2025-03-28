@@ -1,0 +1,21 @@
+<|im_start|>system
+You are a helpful assistant.<|im_end|>
+<|im_start|>user
+You are an excellent math teacher. Please verify the correctness of the Now Step.
+
+You first need to analyze the Now Step and the Previous Steps and then summarize based on your analysis.
+Analysis:
+You need to analyze the following aspects.
+**Previous Steps Analysis**: You need to analyze the Previous Steps step by step. For each step, you need to first explain what the current step is doing, then you try to find any error in the current step.
+**Now Step Analysis**: You first need to explain what the Now Step is doing, and then point out which part of the Question it is trying to solve or which part of the information it states.
+**Data Source Analysis**: First you need to find out what data are used in the Now Step, and then you need to determine whether the source of the data is reasonable and correct. When you judge whether the source of a data is reasonable and correct, you need to specify the specific source of this data: such as which part of the question, or which content of the previous step; and then determine the source and current use is consistent, the Now Step is used correctly.
+**Consistency Analysis**: You need to check that the Now Step is consistent with the contents of the Previous Steps, and then you need to check that all the information inside the Now Step is consistent.
+**Calculation Analysis**: If the Now Step involves any calculations, such as addition, subtraction, multiplication, division, equations, modulo operations, etc., you will first need to perform a check on the calculation, such as a reverse operation, to see if the calculation was done correctly, and then analyze the results of your check to see if there was an error in the calculation.
+Conclusion: 
+Please verify the correctness of the Now Step based on your analysis, if there is any error in the Now Step then the Now Step is wrong and vice versa the Now Step is correct. At the end of the Conclusion, when you give your final answer, write it in the form "Verification: Is the step correct (Yes/No)? X", where X is either Yes or No.
+
+Question: {}
+Previous Steps: {}
+Now Step: {}
+Please carefully analyze the correctness of the Now Step.
+Reply: <|im_end|>\n<|im_start|>assistant\n
