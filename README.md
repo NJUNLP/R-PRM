@@ -2,6 +2,7 @@
 
 <p align="center">
   <a href="https://arxiv.org/abs/2503.21295"> 📃 Paper</a> | 
+  <a href="https://shesj-note.notion.site/R-PRM-Reasoning-Driven-Process-Reward-Modeling-9543fb238b0d48338dd44c60999ffd9b"> 📝 Blog</a> | 
   <a href="https://github.com/NJUNLP/R-PRM"> ⚙️ Code</a> | 
   <a href="https://github.com/NJUNLP/R-PRM"> 🤗 Data</a> | 
   <a href="https://ricardokevins.github.io/"> 📭 Contact</a> 
@@ -19,31 +20,35 @@ Welcome to the repository of **R-PRM**, our cutting-edge framework designed to r
 
 ## 🏆 Experiment Results
 
-### 🧪 **Data Efficiency**:
- R-PRM achieves **F1 = 52.6** with only **12.8k** training samples—already surpassing most existing PRMs. Scaling to the full **285k** samples boosts F1 to **65.2**, outperforming Qwen2.5-Math-7B-PRM800K trained on comparable data.
+### 🧪 **Data Efficiency**
+R-PRM demonstrates exceptional data efficiency under varying training scales:
+- With just **12.8k** training samples, R-PRM reaches **F1 = 52.6**, already surpassing most open-source PRMs.
+- R-PRM achieves **+3.6** F1 over Qwen2.5-Math-7B-PRM800K when trained on just **64k** samples (vs. Qwen's **265k**), and extends this lead to **+8.7** F1 when both are trained on comparable data volumes.
+- Notably, despite using only **~15%** of the data, R-PRM’s performance is already comparable to Qwen2.5-Math-PRM, which was trained on a much larger **1.8M** LLM-filtered dataset.
+
 
 ![Figure2: DataScaline](fig/DataSource.png)
 
-### 📊 **ProcessBench**::
- Our reasoning-driven framework improves over Qwen2.5-Math-7B-PRM800K by **+6.7 F1 (SFT)** and **+11.9 F1 (DPO)**, demonstrating its powerful evaluation capability.
+### 📊 **ProcessBench**
+ Our reasoning-driven framework improves over Qwen2.5-Math-7B-PRM800K by **+8.7 F1 (SFT)** and **+13.9 F1 (DPO)**, demonstrating its powerful evaluation capability.
 
 | **Model**         | **GSM8K**        | **MATH**         | **OLYMPIAD**     | **OMNIMATH**     | **Avg. F1**      |
 | ----------------------- | ---------------------- | ---------------------- | ---------------------- | ---------------------- | ---------------------- |
 | Math-Shepherd-7B        | 47.9                   | 29.5                   | 24.8                   | 23.8                   | 31.5                   |
 | Skywork-PRM-7B          | 70.8                   | 53.6                   | 22.9                   | 21.0                   | 42.1                   |
-| Qwen2.5-Math-7B-PRM800K | 68.2                   | 62.6                   | 50.7                   | 44.3                   | 58.5                   |
+| Qwen2.5-Math-7B-PRM800K | 68.2                   | 62.6                   | 50.7                   | 44.3                   | 56.5                   |
+| ⭐ **R-PRM-7B-SFT**         | 77.2 (**+9.0**)  | 71.6 (**+9.0**)  | 59.6 (**+8.9**)  | 52.3 (**+8.0**)  | 65.2 (**+8.7**)  |
+| ⭐ **R-PRM-7B-DPO**         | 80.7 (**+12.5**) | 76.9 (**+14.3**) | 63.8 (**+13.1**) | 60.1 (**+15.8**) | 70.4 (**+13.9**) |
 | Qwen2.5-Math-PRM-7B     | 82.4                   | 77.6                   | 67.5                   | 66.3                   | 73.5                   |
-| ⭐ **R-PRM-7B-SFT**         | 77.2 (**+9.0**)  | 71.6 (**+9.0**)  | 59.6 (**+8.9**)  | 52.3 (**+8.0**)  | 65.2 (**+6.7**)  |
-| ⭐ **R-PRM-7B-DPO**         | 80.7 (**+12.5**) | 76.9 (**+14.3**) | 63.8 (**+13.1**) | 60.1 (**+15.8**) | 70.4 (**+11.9**) |
 | GPT-4o                  | 79.2                   | 63.6                   | 51.4                   | 53.5                   | 61.9                   |
 | o1-mini                 | 93.2                   | 88.9                   | 87.2                   | 82.4                   | 87.9                   |
 
-### 🧠 **PRMBench**:
- R-PRM achieves **+6.6 F1 (SFT)** and **+8.5 F1 (DPO)** over Qwen2.5-Math-7B-PRM800K
+### 🧠 **PRMBench**
+ R-PRM achieves **+8.5 F1 (DPO)** over Qwen2.5-Math-7B-PRM800K
  📌 Excels in **soundness**, **sensitivity**, and **multi-dimensional error analysis**.
 ![PRMBench Performance](./fig/PRMBench.png)
 
-### 🧪 **Best-of-N Strategy**:
+### 🧪 **Best-of-N Strategy**
  When selecting the best among N reasoning paths, R-PRM improves accuracy by **+8.6 points** over the **Pass@1 baseline**, achieving the **best results** among all PRMs across six math datasets.
 
 | **Setting / Model**      | **AIME24** | **AMC23** | **MATH** | **Olympiad** | **College** | **Minerva** | **Avg.** |
@@ -57,7 +62,7 @@ Welcome to the repository of **R-PRM**, our cutting-edge framework designed to r
 | Qwen2.5-Math-PRM-7B            | 16.7             | 55.0            | 82.0           | 48.0               | **43.5**    | 43.0              | **48.0** |
 | ⭐ **R-PRM-7B-DPO**                | **20.0**   | **62.5**  | **82.2** | **48.0**     | 41.0              | 44.1              | **49.6** |
 
-### 🔁 **Guide Search Strategy**:
+### 🔁 **Guide Search Strategy**
  By guiding reasoning step-by-step, R-PRM surpasses Pass@1 by **+8.4 points**, outperforming both **majority voting** and previous PRM-guided methods.
 
 | **Setting / Model**      | **AIME24** | **AMC23** | **MATH** | **Olympiad** | **College** | **Minerva** | **Avg.** |
@@ -71,7 +76,7 @@ Welcome to the repository of **R-PRM**, our cutting-edge framework designed to r
 | Qwen2.5-Math-PRM-7B            | 16.7             | 60.0            | **81.0** | 43.5               | 39.0              | 40.4              | 46.8           |
 | ⭐ **R-PRM-7B-DPO**                | 16.7             | **70.0**  | 80.0           | **46.5**     | 39.5              | **43.4**    | **49.4** |
 
-### 🚀 **Inference-Time Scaling**:
+### 🚀 **Inference-Time Scaling**
  Evaluation performance improves consistently as more reasoning trajectories are sampled at inference.
  → From **62.8 F1 (2 samples)** to **67.6 F1 (4 samples)** on ProcessBench.
  This showcases R-PRM’s ability to deliver **robust, ensemble-style judgment** through multi-path reasoning.
