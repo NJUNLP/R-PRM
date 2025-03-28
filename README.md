@@ -27,7 +27,7 @@ R-PRM demonstrates exceptional data efficiency under varying training scales:
 - Notably, despite using only **~15%** of the data, R-PRM’s performance is already comparable to Qwen2.5-Math-PRM, which was trained on a much larger **1.8M** LLM-filtered dataset.
 
 
-![Figure2: DataScaline](fig/DataSource.png)
+![Figure2: DataScaline](fig/DataScaling.png)
 
 ### 📊 **ProcessBench**
  Our reasoning-driven framework improves over Qwen2.5-Math-7B-PRM800K by **+8.7 F1 (SFT)** and **+13.9 F1 (DPO)**, demonstrating its powerful evaluation capability.
