@@ -4,7 +4,8 @@
   <a href="https://arxiv.org/abs/2503.21295"> 📃 Paper</a> | 
   <a href="https://shesj-note.notion.site/R-PRM-Reasoning-Driven-Process-Reward-Modeling-9543fb238b0d48338dd44c60999ffd9b"> 📝 Blog</a> | 
   <a href="https://github.com/NJUNLP/R-PRM"> ⚙️ Code</a> | 
-  <a href="https://github.com/NJUNLP/R-PRM"> 🤗 Data</a> | 
+  <a href="https://huggingface.co/kevinpro/R-PRM-7B-DPO"> 🤖 Model</a> | 
+  <a href="https://huggingface.co/datasets/kevinpro/R-PRM"> 🤗 Dataset</a> | 
   <a href="https://ricardokevins.github.io/"> 📭 Contact</a> 
 </p>
 
