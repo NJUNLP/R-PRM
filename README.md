@@ -87,8 +87,10 @@ R-PRM demonstrates exceptional data efficiency under varying training scales:
 
  Evaluation performance improves consistently as more reasoning trajectories are sampled at inference.
  → From **62.8 F1 (2 samples)** to **67.6 F1 (4 samples)** on ProcessBench.
- This showcases R-PRM’s ability to deliver **robust, ensemble-style judgment** through multi-path reasoning.
- R-PRM-DPO scales significantly better than LLaMA-3.3-70B-Instruct, with the F1 gap widening from **+5.1 (N=1)** to **+13.1 (N=16)**, highlighting its robust multi-path aggregation capability.
+
+R-PRM-DPO scales significantly better than LLaMA-3.3-70B-Instruct, with the F1 gap widening from **+5.1 (N=1)** to **+13.1 (N=16)**, highlighting its robust multi-path aggregation capability.
+
+This showcases R-PRM’s ability to deliver **robust, ensemble-style judgment** through multi-path reasoning.
 
 ![Figure3: ProcessBench Scaling](./fig/processbench-scaling.png)
 
