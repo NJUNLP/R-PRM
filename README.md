@@ -55,21 +55,6 @@ R-PRM demonstrates exceptional data efficiency under varying training scales:
  📌 Excels in **soundness**, **sensitivity**, and **multi-dimensional error analysis**.
 ![PRMBench Performance](./fig/PRMBench.png)
 
-### 🧪 **Best-of-N Strategy**
-
- When selecting the best among N reasoning paths, R-PRM improves accuracy by **+8.6 points** over the **Pass@1 baseline**, achieving the **best results** among all PRMs across six math datasets.
-
-| **Setting / Model** | **AIME24** | **AMC23** | **MATH** | **Olympiad** | **College** | **Minerva** | **Avg.** |
-| ------------------------- | ---------------- | --------------- | -------------- | ------------------ | ----------------- | ----------------- | -------------- |
-| pass@1 (baseline)         | 11.2             | 47.8            | 73.0           | 38.0               | 38.6              | 37.2              | 41.0           |
-| maj@8                     | 20.0             | 57.5            | 79.6           | 47.0               | 41.5              | 42.7              | 48.0           |
-| pass@8 (upper bound)      | 33.3             | 82.5            | 88.8           | 58.5               | 47.5              | 57.7              | 61.4           |
-| Math-Shepherd-7B          | 16.7             | 42.5            | 76.0           | 42.0               | 37.0              | 39.3              | 42.3           |
-| Skywork-PRM-7B            | 16.7             | 55.0            | 81.2           | 44.0               | 40.5              | **44.5**    | 47.0           |
-| Qwen2.5-Math-7B-PRM800K   | 13.3             | 57.5            | 80.0           | 44.5               | **43.5**    | 43.0              | 47.7           |
-| Qwen2.5-Math-PRM-7B       | 16.7             | 55.0            | 82.0           | 48.0               | **43.5**    | 43.0              | **48.0** |
-| ⭐**R-PRM-7B-DPO**  | **20.0**   | **62.5**  | **82.2** | **48.0**     | 41.0              | 44.1              | **49.6** |
-
 ### 🔁 **Guide Search Strategy**
 
  By guiding reasoning step-by-step, R-PRM surpasses Pass@1 by **+8.4 points**, outperforming both **majority voting** and previous PRM-guided methods.
