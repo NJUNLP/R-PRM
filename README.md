@@ -11,11 +11,13 @@
 
 ## Overview
 
-Welcome to the repository of **R-PRM**, our cutting-edge framework designed to revolutionize process-level evaluation in mathematical reasoning for large language models (LLMs).
+Process Reward Models (PRMs) evaluate the reasoning process and provide guidance to policy models, which have the potential to further enhance the reasoning capabilities of LLMs. However, current PRMs are limited by their performance.
 
-* 🚀 We introduce **Reasoning-Driven Process Reward Modeling (R-PRM)**, a novel approach that enhances LLMs' ability to evaluate mathematical reasoning step-by-step. By leveraging stronger LLMs to generate seed data, optimizing preferences without additional annotations, and scaling inference-time computation, R-PRM delivers comprehensive, transparent, and robust assessments of reasoning processes.
-* 📈 Our framework significantly boosts evaluation **accuracy** and **generalization**, outperforming strong baselines by wide margins on ProcessBench and PRMBench. When guiding policy models, R-PRM consistently improves reasoning performance across diverse datasets, achieving state-of-the-art (SOTA) results.
-* 🌐 Overall, R-PRM offers a scalable and data-efficient solution to the challenge of scarce process-level annotations, enabling a more generalizable enhancement of reasoning evaluation capabilities without extensive human labeling.
+We propose **Reasoning-Driven Process Reward Modeling (R-PRM)**, a novel approach that enhances LLMs’ ability to evaluate mathematical reasoning step-by-step. Our Framework consists of three parts: supervised cold-start, further meta-optimization in a self-evolving style, and finally inference-time-scaling.
+
+- 🚀  Our Method achieves impressive performance with great **efficiency**. When using the same data scale, our approach outperforms Qwen2.5-Math-7B-PRM800K by a margin of **8.7** in F1 Score on ProcessBench. With the help of DPO that requires no additional annotated data, our PRM achieves comparable performance to Qwen2.5-Math-PRM using only **~15%** of their data volume.
+- ⭐ We validated the effectiveness of R-PRM in **self-improving** through preference optimization (Meta-Optimization) and **inference-time-scaling**. Our performance surpassed that of Llama3.3-70B used for synthetic cold-start data, confirming that our method achieves more than simple distillation of the teacher model
+- *📈*  Our model excels at fine-grained evaluation, achieving the best performance among open-source PRMs on PRMBench with fine-grained error category labels. Additionally, under the guidance of our model, the policy model attained the highest average accuracy across six mathematical reasoning datasets using both Best-of-N and Guided Search methods.
 
 ![Figure 1: R-PRM Framework Illustration](./fig/R-PRM.jpg "R-PRM Framework Illustration")
 
